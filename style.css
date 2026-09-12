@@ -275,7 +275,8 @@ body {
 /* HERO SECTION */
 /* ============================================ */
 .hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 72px);
+    height: calc(100vh - 72px);
     display: flex;
     align-items: center;
     /* Alterado de imagem externa da Unsplash para o caminho da sua imagem local */
