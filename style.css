@@ -271,7 +271,7 @@ body {
     cursor: pointer;
     color: var(--primary-color);
 }
-/* ============================================ /* ============================================ */
+/* ============================================ /*
 /* HERO SECTION */
 /* ============================================ */
 .hero {
@@ -343,6 +343,7 @@ body {
     display: flex;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-2xl);
+    width: 100%;
 }
 
 .hero__buttons .btn-secondary {
@@ -353,49 +354,6 @@ body {
 .hero__buttons .btn-secondary:hover {
     background-color: var(--text-white);
     color: var(--primary-color);
-}
-
-.hero__stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    padding-top: var(--spacing-lg);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-3xl);
-    font-weight: 700;
-    color: var(--secondary-color);
-    margin-bottom: var(--spacing-xs);
-}
-
-.stat-label {
-    font-size: var(--font-size-sm);
-    opacity: 0.8;
-}
-
-.hero__image {
-    position: relative;
-}
-
-.hero__image-bg {
-    width: 100%;
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-.hero__image-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* ============================================ */
@@ -420,21 +378,7 @@ body {
     border-radius: 1rem;
 }
 
-.sobre__image-placeholder {
-    width: 100%;
-    height: 500px;
-    background: var(--bg-gradient);
-    border-radius: var(--border-radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: var(--shadow-xl);
-}
 
-.placeholder-icon {
-    font-size: 120px;
-    opacity: 0.5;
-}
 
 .sobre__subtitle {
     font-family: var(--font-secondary);
@@ -624,73 +568,7 @@ body {
     background-color: var(--bg-secondary);
 }
 
-.depoimentos__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-lg);
-}
 
-.depoimento-card {
-    background-color: var(--bg-primary);
-    padding: var(--spacing-xl);
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: all var(--transition-base);
-}
-
-.depoimento-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.depoimento-card__rating {
-    font-size: var(--font-size-lg);
-    margin-bottom: var(--spacing-md);
-}
-
-.depoimento-card__text {
-    color: var(--text-light);
-    line-height: 1.8;
-    margin-bottom: var(--spacing-md);
-    font-style: italic;
-}
-
-.depoimento-card__author {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding-top: var(--spacing-md);
-    border-top: 1px solid var(--bg-secondary);
-}
-
-.author-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: var(--bg-gradient);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-xl);
-}
-
-.author-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.author-name {
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 2px;
-}
-
-.author-role {
-    font-size: var(--font-size-sm);
-    color: var(--text-light);
-}
 
 /* ============================================ */
 /* SEÇÃO FAQ */
@@ -761,9 +639,6 @@ body {
 /* ============================================ */
 /* SEÇÃO CONTATO */
 /* ============================================ */
-.contato {
-    background-color: var(--bg-secondary);
-}
 
 .contato__container {
     display: grid;
@@ -824,26 +699,6 @@ body {
     gap: var(--spacing-md);
 }
 
-.social-link {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--bg-primary);
-    border-radius: 50%;
-    font-size: var(--font-size-xl);
-    text-decoration: none;
-    transition: all var(--transition-base);
-    box-shadow: var(--shadow-sm);
-}
-
-.social-link:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-    background-color: var(--secondary-color);
-}
-
 /* ============================================ */
 /* FOOTER */
 /* ============================================ */
@@ -887,24 +742,6 @@ body {
 .footer__social {
     display: flex;
     gap: var(--spacing-sm);
-}
-
-.footer__social-link {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    font-size: var(--font-size-lg);
-    text-decoration: none;
-    transition: all var(--transition-base);
-}
-
-.footer__social-link:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-3px);
 }
 
 .footer__title {
@@ -1016,25 +853,6 @@ body {
     transform: translateY(-5px);
     background-color: var(--secondary-dark);
 }
-
-/* ============================================ */
-/* ANIMAÇÕES */
-/* ============================================ */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
-}
-
 /* ============================================ */
 /* RESPONSIVIDADE */
 /* ============================================ */
@@ -1055,23 +873,6 @@ body {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
     }
-
-    .hero__image {
-        order: -1;
-    }
-
-    .hero__image-bg {
-        height: 350px;
-    }
-
-    .hero__stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .sobre__image-placeholder {
-        height: 400px;
-    }
-
     .footer__bottom {
         flex-direction: column;
         gap: var(--spacing-md);
@@ -1128,23 +929,10 @@ body {
     .hero__buttons {
         flex-direction: column;
     }
-
-    .hero__stats {
-        grid-template-columns: 1fr;
-        gap: var(--spacing-md);
-    }
-
-    .stat-number {
-        font-size: var(--font-size-2xl);
-    }
-
     .servicos__grid,
-    .destaques__grid,
-    .beneficios__grid,
-    .depoimentos__grid {
+    .beneficios__grid {
         grid-template-columns: 1fr;
     }
-
     .section {
         padding: var(--spacing-2xl) 0;
     }
@@ -1178,12 +966,6 @@ body {
     .contato__container {
     grid-template-columns: 1fr;
 }
-    .hero__image-bg,
-    .sobre__image-placeholder {
-      height: auto;
-}
-
-
     .btn {
   white-space: normal;
 }
@@ -1200,6 +982,57 @@ body {
 
     .section__title {
         font-size: var(--font-size-3xl);
+    }
+}
+/* ============================================ */
+/* RESPONSIVIDADE - Mobile (768px) */
+/* ============================================ */
+@media screen and (max-width: 768px) {
+    .hero__content {
+        align-items: center;      /* Mobile: centraliza */
+        text-align: center;       /* Centraliza texto */
+        padding: 0 1rem;
+    }
+
+    .hero__title {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .hero__description {
+        font-size: var(--font-size-base);
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* ============================================ */
+/* RESPONSIVIDADE - Small Mobile (480px) */
+/* ============================================ */
+@media screen and (max-width: 480px) {
+    .hero__content {
+        padding: 0 1rem;
+    }
+
+    .hero__title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .hero__description {
+        font-size: 0.95rem;
+    }
+
+    .hero__buttons {
+        gap: var(--spacing-sm);
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+        max-width: 100%;
+        padding: var(--spacing-sm) var(--spacing-md);
     }
 }
 /* ============================================ */
@@ -1230,74 +1063,6 @@ body {
     }
 }
 
-/* ============================================ */
-/* AJUSTES PARA TÍTULO EM TELAS PEQUENAS (iPhone) */
-/* ============================================ */
-@media screen and (max-width: 480px) {
-    .hero__title {
-        font-size: 1.75rem;       /* reduz tamanho (~28px) */
-        line-height: 1.2;         /* melhora quebra de linha */
-        word-break: break-word;   /* força quebra se necessário */
-        text-align: center;       /* centraliza para não estourar */
-        margin-bottom: var(--spacing-md);
-    }
 
-    .hero__description {
-        font-size: 1rem;          /* ~16px */
-        text-align: center;       /* centraliza texto */
-        margin-bottom: var(--spacing-lg);
-    }
-}
-/* ============================================ */
-/* AJUSTES ESPECÍFICOS PARA iPhone SE e iPhone 12 */
-/* ============================================ */
-@media screen and (max-width: 480px) {
-    /* Corrige título estourando no iPhone SE */
-    .hero__title {
-        font-size: 1.5rem;        /* reduz ainda mais (~24px) */
-        line-height: 1.2;         /* melhora quebra de linha */
-        word-break: break-word;   /* força quebra se necessário */
-        text-align: center;       /* centraliza para não sair da tela */
-        margin: 0 auto var(--spacing-md);
-    }
-
-    .hero__description {
-        font-size: 1rem;
-        text-align: center;
-        margin: 0 auto var(--spacing-lg);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Centraliza botões no iPhone 12 e similares */
-    .hero__buttons {
-        flex-direction: column;
-        align-items: center;      /* centraliza horizontalmente */
-        justify-content: center;  /* centraliza verticalmente */
-    }
-
-    .hero__buttons .btn {
-        width: 100%;              /* ocupa largura total para alinhar */
-        max-width: 280px;         /* limite para não ficar exagerado */
-    }
-}
-/* ============================================ */
-/* AJUSTES PARA BOTÕES EM TELAS MÉDIAS (iPhone 12 etc.) */
-/* ============================================ */
-@media screen and (max-width: 768px) {
-    .hero__buttons {
-        flex-direction: column;   /* já estava, mantém */
-        align-items: center;      /* centraliza horizontalmente */
-        justify-content: center;  /* centraliza verticalmente */
-        gap: var(--spacing-md);   /* mantém espaçamento uniforme */
-        text-align: center;       /* garante alinhamento do texto */
-    }
-
-    .hero__buttons .btn {
-        width: 100%;              /* ocupa largura total */
-        max-width: 280px;         /* limite para não ficar exagerado */
-        margin: 0 auto;           /* centraliza dentro do container */
-    }
-}
 
 
