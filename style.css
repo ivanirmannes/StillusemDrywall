@@ -284,7 +284,7 @@ body {
                       url('assets/img/logo stillus.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     padding-top: var(--header-height);
     position: relative;
     overflow: hidden;
@@ -1202,3 +1202,102 @@ body {
         font-size: var(--font-size-3xl);
     }
 }
+/* ============================================ */
+/* AJUSTES ESPECÍFICOS PARA iPhone */
+/* ============================================ */
+@media screen and (max-width: 480px) {
+    /* Corrige fundo da seção Hero */
+    .hero {
+        background-attachment: scroll;
+    }
+
+    /* Força grid em coluna única */
+    .hero__container,
+    .sobre__container,
+    .contato__container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Imagens não quebram layout */
+    .hero__image-bg,
+    .sobre__image-placeholder {
+        height: auto;
+    }
+
+    /* Botões podem quebrar linha sem overflow */
+    .btn {
+        white-space: normal;
+    }
+}
+
+/* ============================================ */
+/* AJUSTES PARA TÍTULO EM TELAS PEQUENAS (iPhone) */
+/* ============================================ */
+@media screen and (max-width: 480px) {
+    .hero__title {
+        font-size: 1.75rem;       /* reduz tamanho (~28px) */
+        line-height: 1.2;         /* melhora quebra de linha */
+        word-break: break-word;   /* força quebra se necessário */
+        text-align: center;       /* centraliza para não estourar */
+        margin-bottom: var(--spacing-md);
+    }
+
+    .hero__description {
+        font-size: 1rem;          /* ~16px */
+        text-align: center;       /* centraliza texto */
+        margin-bottom: var(--spacing-lg);
+    }
+}
+/* ============================================ */
+/* AJUSTES ESPECÍFICOS PARA iPhone SE e iPhone 12 */
+/* ============================================ */
+@media screen and (max-width: 480px) {
+    /* Corrige título estourando no iPhone SE */
+    .hero__title {
+        font-size: 1.5rem;        /* reduz ainda mais (~24px) */
+        line-height: 1.2;         /* melhora quebra de linha */
+        word-break: break-word;   /* força quebra se necessário */
+        text-align: center;       /* centraliza para não sair da tela */
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .hero__description {
+        font-size: 1rem;
+        text-align: center;
+        margin: 0 auto var(--spacing-lg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Centraliza botões no iPhone 12 e similares */
+    .hero__buttons {
+        flex-direction: column;
+        align-items: center;      /* centraliza horizontalmente */
+        justify-content: center;  /* centraliza verticalmente */
+    }
+
+    .hero__buttons .btn {
+        width: 100%;              /* ocupa largura total para alinhar */
+        max-width: 280px;         /* limite para não ficar exagerado */
+    }
+}
+/* ============================================ */
+/* AJUSTES PARA BOTÕES EM TELAS MÉDIAS (iPhone 12 etc.) */
+/* ============================================ */
+@media screen and (max-width: 768px) {
+    .hero__buttons {
+        flex-direction: column;   /* já estava, mantém */
+        align-items: center;      /* centraliza horizontalmente */
+        justify-content: center;  /* centraliza verticalmente */
+        gap: var(--spacing-md);   /* mantém espaçamento uniforme */
+        text-align: center;       /* garante alinhamento do texto */
+    }
+
+    .hero__buttons .btn {
+        width: 100%;              /* ocupa largura total */
+        max-width: 280px;         /* limite para não ficar exagerado */
+        margin: 0 auto;           /* centraliza dentro do container */
+    }
+}
+
+
