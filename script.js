@@ -242,67 +242,8 @@ window.addEventListener('load', () => {
         }, 300);
     }
 });
-
-// ============================================
-// DARK MODE TOGGLE - Modo escuro (opcional)
-// ============================================
-// Descomente se quiser adicionar funcionalidade de dark mode
-/*
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const body = document.body;
-
-if (darkModeToggle) {
-    // Verificar preferência salva
-    const darkMode = localStorage.getItem('darkMode');
-    if (darkMode === 'enabled') {
-        body.classList.add('dark-mode');
-    }
-
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-
-        if (body.classList.contains('dark-mode')) {
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
-}
-/*
-
-// ============================================
-// ANALYTICS - Rastreamento de eventos (opcional)
-// ============================================
-// Adicione seu código do Google Analytics ou outro serviço aqui
-/*
-// Exemplo de rastreamento de cliques em botões
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        const buttonText = e.target.textContent;
-        console.log('Botão clicado:', buttonText);
-        // gtag('event', 'click', { 'button_name': buttonText });
-    });
-});
-*/
-
-// ============================================
-// CONSOLE MESSAGE - Mensagem para desenvolvedores
-// ============================================
-console.log('%c Stillus em Drywall - Landing Page ',
-    'background: #0f2557; color: #d4af37; font-size: 16px; padding: 10px; font-weight: bold;');
-console.log('%c Desenvolvido com ❤️ ',
-    'background: #d4af37; color: #0f2557; font-size: 12px; padding: 5px;');
-
-// ============================================
-// INICIALIZAÇÃO - Executar ao carregar a página
-// ============================================
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('✅ Landing Page carregada com sucesso!');
-
-    // Inicializar contadores
     scrollActive();
     toggleScrollTopButton();
-
-    // Adicionar classe de carregamento
     document.body.classList.add('loaded');
 });
